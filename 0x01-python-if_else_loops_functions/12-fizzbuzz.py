@@ -5,7 +5,7 @@ def fizzbuzz():
     if not n % 3 and not n % 5:
         print("FizzBuzz", end=' ')
     elif not n % 3:
-        print(Fizz",end=' ')
+        print("Fizz", end=' ')
     elif not n % 5:
         print('Buzz', end=' ')
     else:
