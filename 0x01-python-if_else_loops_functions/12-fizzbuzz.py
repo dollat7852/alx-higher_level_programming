@@ -11,6 +11,7 @@ def _fizzbuzz(n):
     else:
         print(n, end=' ')
 
+
 def fizzbuzz():
     for i in range(1, 101):
         _fizzbuzz(i)
