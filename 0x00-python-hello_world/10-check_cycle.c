@@ -19,7 +19,10 @@ int check_cycle(listint_t *list)
 	while (tmp != NULL && tmp->next != NULL)
 	{
 		if (current == tmp)
+		{
+			printf("1");
 			return (1);
+		}
 		current = tmp;
 		tmp = tmp->next;
 	}
