@@ -1,30 +1,21 @@
 #include "lists.h"
 
-/**
- * check_cycle - check if 2 consecutive elements of a list points to each other
- * @list: list to be checked
- * Return: 0 if no repetition, 1 otherwise
- */
-
 int check_cycle(listint_t *list)
 {
-	/* declare placeholders */
-	listint_t *current = list;
-	listint_t *tmp;
+	listint_t *tortoise, *hare;
 
-	if (current == NULL) /* an empty list cannot be cycle*/
+	tortoise = list;
+	if (!list)
 		return (0);
-	tmp = current->next;
 
-	while (tmp != NULL && tmp->next != NULL)
+	hare = list->next;
+
+	while (hare && hare->next)
 	{
-		if (current == tmp)
-		{
-			printf("1");
+		if (tortoise == hare)
 			return (1);
-		}
-		current = tmp;
-		tmp = tmp->next;
+		hare = hare->next->next;
+		tortoise = tortoise->next;
 	}
 	return (0);
 }
