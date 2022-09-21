@@ -1,6 +1,9 @@
 #include "lists.h"
 /**
- *
+ *insert_node - A function that appropriately insert a node in a sorted list
+ *@head: head address of the sorted list
+ *@number: int value of the new node
+ *Return: address of new node
  */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -17,7 +20,7 @@ listint_t *insert_node(listint_t **head, int number)
 	if (current == NULL || current->n > number)
 	{
 		new_l->next = current;
-		current->next = new_l;
+		current = new_l;
 		return(new_l);
 	}
 	while(current != NULL && tmp)
