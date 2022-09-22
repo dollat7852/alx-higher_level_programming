@@ -15,5 +15,6 @@ if __name__ == '__main__':
     b = int(args[2])
     funcs = (calc.add, calc.sub, calc.mul, calc.div)
     for op, func in zip('+-*/', funcs):
-        print("{:d} {:s} {:d} = {:d}".format(a, op, b, func(a, b)))
-        break
+        if op == args[1]:
+            print("{:d} {:s} {:d} = {:d}".format(a, op, b, func(a, b)))
+            break
