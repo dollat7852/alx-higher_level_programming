@@ -4,6 +4,7 @@ import sys
 if __name__ == '__main__':
     args = sys.argv
     args.pop(0)
+    total = 0
 for arg in args:
-    sum += int(arg)
-print("{:d}".format(sum))
+    total += int(arg)
+print("{:d}".format(total))
