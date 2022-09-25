@@ -6,6 +6,7 @@ def add_tuple(a=(), b=()):
         b = (*b, 0)
     return a[0] + b[0], a[1] + b[1]
 
+
 if __name__ == '__main__':
     a = (1, 89)
     b = (88, 11)
