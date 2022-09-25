@@ -10,7 +10,7 @@ int is_palindrome(listint_t **head)
 	listint_t *current, *first, *last;
 	int len = 0;
 
-	if (!list)
+	if (!head)
 		return (0);
 	/* empty of a single element list is a palindrome*/
 	if (!(*head) || !((*head)->next))
@@ -27,6 +27,7 @@ int is_palindrome(listint_t **head)
 	if (first->n != last->n)
 		return (0);
 	/* if it has 3 element and first and last are equal it is a palindrome*/
-	else if (n == 3)
-		return (1)
+	else if (len == 3)
+		return (1);
+	return (0);
 }
