@@ -4,4 +4,4 @@ def print_sorted_dictionary(a_dictionary):
         return None
     dic = sorted(a_dictionary)
     for k, v in dic.items():
-        print("{}: {}".format(k, v))
+        print("{:s}: {}".format(k, v))

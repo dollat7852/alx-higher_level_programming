@@ -2,5 +2,5 @@
 def multiply_by_2(a_dictionary):
     if a_dictionary is None:
         return None
-    new_dict = {k: v*2 for k, v in a_dictionary.items()}
+    new_dict = {k: a_dictionary[k] * 2 for k in a_dictionary}
     return new_dict
