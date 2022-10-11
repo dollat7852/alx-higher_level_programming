@@ -1,10 +1,18 @@
 #!/usr/bin/python3
 
+"""Defining a class square"""
+
 
 class Square:
+    """ Class definition"""
 
     def __init__(self, size=0):
+        """ instantiation of the class
 
+        Args:
+        param size (int): the size of the square
+
+        """
         """ check whether size is of type int and greater than zero (0)"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -13,9 +21,9 @@ class Square:
 
         self.__size = size
 
-        """" getter method for private properties"""
         @property
-    def size():
+    def size(self):
+        """" getter method for private properties"""
         return (self.__size)
 
     """" setter method for private property """
