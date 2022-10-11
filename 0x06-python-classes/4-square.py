@@ -21,14 +21,14 @@ class Square:
 
         self.__size = size
 
-        @property
+    @property
     def size(self):
         """" getter method for private properties"""
         return (self.__size)
 
-    """" setter method for private property """
     @size.setter
     def size(self, value):
+        """" setter method for private property """
         self.__size = value
 
     def area(self):
