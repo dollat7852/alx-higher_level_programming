@@ -14,11 +14,6 @@ class Square:
 
         """
         """ check whether size is of type int and greater than zero (0)"""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif (size < 0):
-            raise ValueError("size must be >= 0")
-
         self.__size = size
 
     @property
@@ -29,10 +24,10 @@ class Square:
     @size.setter
     def size(self, value):
         """" setter method for private property """
-        if not isinstance (value, int):
-            raise TypeError("Size must be an integer")
-        elif value < 0 :
-            raise ValueError("size must be >=0")
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
