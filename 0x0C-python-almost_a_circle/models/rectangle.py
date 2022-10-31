@@ -92,12 +92,33 @@ class Rectangle(Base):
             self.x = args[3]
         if n>4:
             self.y = args[4]
+        if n:
+            return
 
         """Using key/value arguments (kwargs)"""
         checks = ("id", "width", "height", "x", "y")
         for key,val in kwargs.items():
             if key in checks:
                 self.__setattr__(key, val)
-            else:
-                raise KeyError(f"Invalid keyword argument {key}")
 
+
+    def to_dictionary(self):
+        """Provide dictionary representation of the rectangle"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+
+    def to_csv_str(self):
+        """Provide 'csv' representation of the rectangle"""
+        fmt = "{},{},{},{},{}"
+        return fmt.format(*(
+            self.id,
+            self.width,
+            self.height,
+            self.x,
+            self.y
+        ))

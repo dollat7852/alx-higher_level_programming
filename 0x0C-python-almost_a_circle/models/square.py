@@ -53,3 +53,18 @@ class Square(Rectangle):
                  """Update the super method"""
                  super().update(**kwargs)
 
+    def to_dictionary(self):
+        """Provides a 'dict' representtion of the object"""
+        return {
+             "id": self.id,
+             "size": self.size,
+            "x": self.x, "y": self.y
+        }
+
+    def to_csv_str(self):
+        """Provides a 'dict' representtion of the object"""
+        fmt = "{},{},{},{}"
+        return fmt.format(*(
+            self.id, self.size,
+             self.x, self.y
+        ))
